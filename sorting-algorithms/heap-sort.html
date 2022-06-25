@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html class="layout-wrapper">
+<!-- Mirrored from www.toptal.com/developers/sorting-algorithms/heap-sort by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jun 2022 06:08:34 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e3359cee6b","applicationID":"48777225","transactionName":"JV0NEUYJCQkARxgVEwReCgYbFgQCAEYYFg4JRQ==","queueTime":0,"applicationTime":317,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"VgcEVlJaGwcIU1ZVBQMC",licenseKey:"e3359cee6b",applicationID:"48777225"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(27),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(28),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(28),a=t(27);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(24),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(27),s=t(28),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(29);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(26),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],24:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(t)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],25:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],26:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],27:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],28:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],29:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(27),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(22),s=t("handle"),c=t(27),f=t("ee"),u=t(25),d=t(17),l=t(19),p=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(16),t(23),m[v]?(m[v]("DOMContentLoaded",o,l(!1)),h[v]("load",r,l(!1))):(m[w]("onreadystatechange",i),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(28),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script><![endif]-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Heap Sort - Sorting Algorithm Animations | Toptal®</title>
+    <meta name="description" content="Animation, code, analysis, and discussion of heap sort on 4 initial conditions.">
+    <link rel="canonical" href="heap-sort.html">
+    <link rel="alternate" title="Toptal Engineering Blog" type="application/rss+xml" href="../blog.rss">
+    <meta property="og:image" content="../../../bs-uploads.toptal.io/blackfish-uploads/generic_page/seo/og_image_file/og_image/27769/og_image_76642a-76642aa3fbe8f00d2a15c9c80eec68e6.jpg">
+    <meta property="og:url" content="heap-sort.html">
+    <meta property="og:title" content="Heap Sort - Sorting Algorithm Animations">
+    <meta property="og:description" content="Animation, code, analysis, and discussion of heap sort on 4 initial conditions.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@toptal">
+    <script>
+        //<![CDATA[
+        window.gon = {};
+        gon.env = "production";
+        gon.api_sessions_url = "https://www.toptal.com/api/cms/sessions";
+        gon.api_shorten_url = "https://www.toptal.com/shorten_url";
+        gon.geo_target_url = "https://www.toptal.com/api/geo_target";
+        gon.referrers_url = "https://www.toptal.com/referrers";
+        gon.flash = {};
+        gon.google_api_browser_key = "AIzaSyDED9v55b-c1opDYMEDYBkOgDFGlBMICGY";
+        gon.google_maps_api_browser_key = "AIzaSyB-X6Stk7LlgQ9uRv3901GP-XVKXqtbY3w";
+        gon.recaptcha_site_key = "6LfgR1UUAAAAAJ8-zrjvTk18gKat-4CdBPSrUJoR";
+        gon.recaptcha_url = "../../../www.google.com/recaptcha/api.js";
+        gon.url_share_counter = 1;
+        gon.bounce_modal_settings = {
+            "show": false,
+            "type": "fullscreen",
+            "type_modifier": "",
+            "current_vertical_role_type": "Developer",
+            "template_options": {
+                "blog": {
+                    "bundle_name": "blog_developers",
+                    "submit_path": "https://www.toptal.com/blog/subscription",
+                    "form_vertical": "developers",
+                    "blog_image": "developers",
+                    "blog_type": "Toptal Engineering Blog",
+                    "subtitle": "for the latest software trends, in-depth development tutorials, and technical resources.",
+                    "articles": [{
+                        "url": "https://www.toptal.com/julia/code-writing-code-modern-metaprogamming",
+                        "image": "https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1018652/retina_1708x683_COVER-a65fab23a8750d599f8ed3b1997e019f.png",
+                        "title": "Code Writing Code: An Introduction to the Theory and Practice of Modern Metaprogramming",
+                        "author": "Will Beddow",
+                        "author_position": "Full-stack Developer"
+                    }, {
+                        "url": "https://www.toptal.com/grpc/grpc-vs-rest-api",
+                        "image": "https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1011090/retina_1708x683_COVER-19fd309cfa45850d8b12cce4bd946533.png",
+                        "title": "gRPC vs. REST: Getting Started With the Best API Protocol",
+                        "author": "Laszlo Gyori",
+                        "author_position": "Software Developer"
+                    }, {
+                        "url": "https://www.toptal.com/aws/aws-cost-optimization-at-scale",
+                        "image": "https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/996247/retina_1708x683_COVER-d19edcd5321ec1cb72c0cab7491ee365.png",
+                        "title": "Efficiency at Scale: A Tale of AWS Cost Optimization",
+                        "author": "Rudolf Eremyan",
+                        "author_position": "Data Scientist"
+                    }]
+                },
+                "fullscreen": {
+                    "subtitle": "engineers",
+                    "bounce_modal_header_skill": "developers",
+                    "verticals": ["developers", "designers", "finance_experts", "project_managers", "product_managers"],
+                    "for_projects": false,
+                    "email_validation_api_path": "https://www.toptal.com/giorgio/api/company_email_validations",
+                    "submit_path": "https://www.toptal.com/giorgio/api/leads",
+                    "default_vertical": "developers"
+                }
+            }
+        };
+        gon.ga_settings = {
+            "group": "Sorting Algorithms"
+        };
+        gon.fullstory_rate = 0.0025;
+        gon.fullstory_enabled = true;
+        gon.fullstory_org_key = "1YmX";
+        //]]>
+    </script>
+    <script>
+        if (!window.appinfo) {
+            (function() {
+                // Setup handlers
+                var result;
+                var done = false;
+                var thens = [];
+                window.onAppInfoLoaded = {
+                    then: function(callback) {
+                        done ? callback(result) : thens.push(callback)
+                        return this
+                    }
+                };
+
+                function resolve() {
+                    thens.forEach(function(callback) {
+                        callback(result)
+                    });
+                }
+
+                // Scrips callback, appinfo calls it internally
+                window.onAppinfoLoad = function() {
+                    window.appinfo.grab('https://appinfo.toptal.com/', {
+                        data: gon['application_info_data'] || {},
+                        withCredentials: false,
+                        callback: function(response, error) {
+                            done = true;
+                            if (!error) {
+                                result = {
+                                    applicationInfo: response.data
+                                };
+                            }
+                            resolve();
+                        }
+                    })
+                };
+
+                // Load script
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.onerror = function() {
+                    done = true;
+                    resolve();
+                }
+                script.src = '../../../appinfo.toptal.com/script.js';
+                document.getElementsByTagName('head')[0].appendChild(script);
+            })();
+        }
+    </script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-21104039-1"></script>
+    <script>
+        var trackingId = 'UA-21104039-1'
+        var anonymizeIp = false
+        var gaContentGroup = (window.gon && window.gon.ga_settings) ? window.gon.ga_settings.group : undefined
+
+        //Leave it available globally to be initialized when the google analytics widgets gets loaded
+        window.googleAnalyticsTrackingId = trackingId
+
+        window.dataLayer = window.dataLayer || []
+        window.gtag = function() {
+            dataLayer.push(arguments)
+        }
+
+        gtag('js', new Date())
+        gtag('config', trackingId, Object.assign({
+                'anonymize_ip': anonymizeIp,
+                'content_group1': gaContentGroup,
+                'linker': ['www.toptal.com', 'staging.toptal.net'],
+                'custom_map': {
+                    'dimension10': 'client_id'
+                }
+            },
+            buildAudienceConfig(),
+            buildDebugConfig()
+        ))
+
+        track15SecondsRead()
+        addBlogPageVisitToDataLayer()
+
+        function buildAudienceConfig() {
+            const urlParams = new URLSearchParams(window.location.search)
+            const dimension9 = urlParams.get('utm_audience')
+
+            return {...(dimension9 && {
+                    dimension9
+                })
+            }
+        }
+
+        // Dimension 22 = Blackfish Code Version
+        function buildDebugConfig() {
+            const dimension22 = 'b900d90dd4992bc0c295bacaabf00682bc7df44a'
+
+            return {...(dimension22 && {
+                    dimension22
+                })
+            }
+        }
+
+        function track15SecondsRead() {
+            setTimeout(() => {
+                window.gtag('event', 'read', {
+                    'event_category': '15_seconds'
+                })
+            }, 15000)
+        }
+
+        function addBlogPageVisitToDataLayer() {
+            if (gaContentGroup === "Blog posts") {
+                window.gtag('event', 'blogPageVisit', {
+                    'event_label': 'Blog Page Visit',
+                    'event_category': 'blog_page_visit',
+                    'non_interaction': true
+                })
+            }
+        }
+
+        function hasGoogleAnalyticsFunction(functionName) {
+            const hasGoogleAnalytics = window.googleAnalytics !== null && typeof window.googleAnalytics === 'object'
+
+            return hasGoogleAnalytics && typeof window.googleAnalytics[functionName] === 'function'
+        }
+
+        function setupGAeventsForCTAsOnRemoteWorkConsultingPage() {
+            if (window.location.pathname == '/services/remote-work-consulting-about') {
+                function setupListeners() {
+                    [].slice.call(document.querySelectorAll('[data-ga-action]')).map(function(el) {
+                        el.addEventListener('click', trackClick.bind(this, el.dataset.gaAction, el.dataset.gaLabel));
+                    });
+                }
+
+                function trackClick(action, label, event) {
+                    if (hasGoogleAnalyticsFunction('trackRemoteWorkConsulting')) {
+                        window.googleAnalytics.trackRemoteWorkConsulting(action, label)
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', setupListeners);
+            }
+        }
+
+        setupGAeventsForCTAsOnRemoteWorkConsultingPage();
+
+        function initCoreWebVitalsTracking() {
+            if (hasGoogleAnalyticsFunction('trackCoreWebVitals')) {
+                window.googleAnalytics.trackCoreWebVitals()
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initCoreWebVitalsTracking);
+    </script>
+    <link href="../../../bs-assets.toptal.io/blackfish-assets/public/base/images/favicons/toptal-blog-favicon32x32_c2c2ba.png" rel="icon" />
+    <!--[if IE]><link href="https://bs-assets.toptal.io/blackfish-assets/public/base/images/favicons/toptal-blog-favicon32x32_fd5e46.ico" rel="shortcut icon" /><![endif]-->
+    <link href="../../../bs-assets.toptal.io/blackfish-assets/public/base/images/favicons/toptal-blog-favicon57x57_2ec58c.png" rel="apple-touch-icon-precomposed" sizes="57x57" />
+    <link href="../../../bs-assets.toptal.io/blackfish-assets/public/base/images/favicons/toptal-blog-favicon72x72_7485f3.png" rel="apple-touch-icon-precomposed" sizes="72x72" />
+    <link href="../../../bs-assets.toptal.io/blackfish-assets/public/base/images/favicons/toptal-blog-favicon114x114_01eb8c.png" rel="apple-touch-icon-precomposed" sizes="114x114" />
+    <link href="../../../bs-assets.toptal.io/blackfish-assets/public/base/images/favicons/toptal-blog-favicon57x57_2ec58c.png" rel="apple-touch-icon-precomposed" />
+    <script>
+        //<![CDATA[
+        /*! modernizr 3.6.0 (Custom Build) | MIT *
+         * https://modernizr.com/download/?-cssgradients-csspositionsticky-csstransforms-csstransitions-flexbox-flexboxlegacy-flexboxtweener-flexwrap-history-input-localstorage-objectfit-rgba-prefixed-setclasses !*/
+        ! function(e, t, n) {
+            function r(e, t) {
+                return typeof e === t
+            }
+
+            function o() {
+                var e, t, n, o, i, s, a;
+                for (var l in x)
+                    if (x.hasOwnProperty(l)) {
+                        if (e = [], t = x[l], t.name && (e.push(t.name.toLowerCase()), t.options && t.options.aliases && t.options.aliases.length))
+                            for (n = 0; n < t.options.aliases.length; n++) e.push(t.options.aliases[n].toLowerCase());
+                        for (o = r(t.fn, "function") ? t.fn() : t.fn, i = 0; i < e.length; i++) s = e[i], a = s.split("."), 1 === a.length ? Modernizr[a[0]] = o : (!Modernizr[a[0]] || Modernizr[a[0]] instanceof Boolean || (Modernizr[a[0]] = new Boolean(Modernizr[a[0]])), Modernizr[a[0]][a[1]] = o), C.push((o ? "" : "no-") + a.join("-"))
+                    }
+            }
+
+            function i(e) {
+                var t = w.className,
+                    n = Modernizr._config.classPrefix || "";
+                if (S && (t = t.baseVal), Modernizr._config.enableJSClass) {
+                    var r = new RegExp("(^|\\s)" + n + "no-js(\\s|$)");
+                    t = t.replace(r, "$1" + n + "js$2")
+                }
+                Modernizr._config.enableClasses && (t += " " + n + e.join(" " + n), S ? w.className.baseVal = t : w.className = t)
+            }
+
+            function s(e, t) {
+                return !!~("" + e).indexOf(t)
+            }
+
+            function a() {
+                return "function" != typeof t.createElement ? t.createElement(arguments[0]) : S ? t.createElementNS.call(t, "http://www.w3.org/2000/svg", arguments[0]) : t.createElement.apply(t, arguments)
+            }
+
+            function l() {
+                var e = t.body;
+                return e || (e = a(S ? "svg" : "body"), e.fake = !0), e
+            }
+
+            function f(e, n, r, o) {
+                var i, s, f, u, d = "modernizr",
+                    c = a("div"),
+                    p = l();
+                if (parseInt(r, 10))
+                    for (; r--;) f = a("div"), f.id = o ? o[r] : d + (r + 1), c.appendChild(f);
+                return i = a("style"), i.type = "text/css", i.id = "s" + d, (p.fake ? p : c).appendChild(i), p.appendChild(c), i.styleSheet ? i.styleSheet.cssText = e : i.appendChild(t.createTextNode(e)), c.id = d, p.fake && (p.style.background = "", p.style.overflow = "hidden", u = w.style.overflow, w.style.overflow = "hidden", w.appendChild(p)), s = n(c, e), p.fake ? (p.parentNode.removeChild(p), w.style.overflow = u, w.offsetHeight) : c.parentNode.removeChild(c), !!s
+            }
+
+            function u(e) {
+                return e.replace(/([A-Z])/g, function(e, t) {
+                    return "-" + t.toLowerCase()
+                }).replace(/^ms-/, "-ms-")
+            }
+
+            function d(t, n, r) {
+                var o;
+                if ("getComputedStyle" in e) {
+                    o = getComputedStyle.call(e, t, n);
+                    var i = e.console;
+                    if (null !== o) r && (o = o.getPropertyValue(r));
+                    else if (i) {
+                        var s = i.error ? "error" : "log";
+                        i[s].call(i, "getComputedStyle returning null, its possible modernizr test results are inaccurate")
+                    }
+                } else o = !n && t.currentStyle && t.currentStyle[r];
+                return o
+            }
+
+            function c(t, r) {
+                var o = t.length;
+                if ("CSS" in e && "supports" in e.CSS) {
+                    for (; o--;)
+                        if (e.CSS.supports(u(t[o]), r)) return !0;
+                    return !1
+                }
+                if ("CSSSupportsRule" in e) {
+                    for (var i = []; o--;) i.push("(" + u(t[o]) + ":" + r + ")");
+                    return i = i.join(" or "), f("@supports (" + i + ") { #modernizr { position: absolute; } }", function(e) {
+                        return "absolute" == d(e, null, "position")
+                    })
+                }
+                return n
+            }
+
+            function p(e) {
+                return e.replace(/([a-z])-([a-z])/g, function(e, t, n) {
+                    return t + n.toUpperCase()
+                }).replace(/^-/, "")
+            }
+
+            function g(e, t, o, i) {
+                function l() {
+                    u && (delete k.style, delete k.modElem)
+                }
+                if (i = r(i, "undefined") ? !1 : i, !r(o, "undefined")) {
+                    var f = c(e, o);
+                    if (!r(f, "undefined")) return f
+                }
+                for (var u, d, g, m, v, h = ["modernizr", "tspan", "samp"]; !k.style && h.length;) u = !0, k.modElem = a(h.shift()), k.style = k.modElem.style;
+                for (g = e.length, d = 0; g > d; d++)
+                    if (m = e[d], v = k.style[m], s(m, "-") && (m = p(m)), k.style[m] !== n) {
+                        if (i || r(o, "undefined")) return l(), "pfx" == t ? m : !0;
+                        try {
+                            k.style[m] = o
+                        } catch (y) {}
+                        if (k.style[m] != v) return l(), "pfx" == t ? m : !0
+                    }
+                return l(), !1
+            }
+
+            function m(e, t) {
+                return function() {
+                    return e.apply(t, arguments)
+                }
+            }
+
+            function v(e, t, n) {
+                var o;
+                for (var i in e)
+                    if (e[i] in t) return n === !1 ? e[i] : (o = t[e[i]], r(o, "function") ? m(o, n || t) : o);
+                return !1
+            }
+
+            function h(e, t, n, o, i) {
+                var s = e.charAt(0).toUpperCase() + e.slice(1),
+                    a = (e + " " + T.join(s + " ") + s).split(" ");
+                return r(t, "string") || r(t, "undefined") ? g(a, t, o, i) : (a = (e + " " + P.join(s + " ") + s).split(" "), v(a, t, n))
+            }
+
+            function y(e, t, r) {
+                return h(e, n, n, t, r)
+            }
+            var x = [],
+                b = {
+                    _version: "3.6.0",
+                    _config: {
+                        classPrefix: "",
+                        enableClasses: !0,
+                        enableJSClass: !0,
+                        usePrefixes: !0
+                    },
+                    _q: [],
+                    on: function(e, t) {
+                        var n = this;
+                        setTimeout(function() {
+                            t(n[e])
+                        }, 0)
+                    },
+                    addTest: function(e, t, n) {
+                        x.push({
+                            name: e,
+                            fn: t,
+                            options: n
+                        })
+                    },
+                    addAsyncTest: function(e) {
+                        x.push({
+                            name: null,
+                            fn: e
+                        })
+                    }
+                },
+                Modernizr = function() {};
+            Modernizr.prototype = b, Modernizr = new Modernizr;
+            var C = [],
+                w = t.documentElement,
+                S = "svg" === w.nodeName.toLowerCase(),
+                _ = "Moz O ms Webkit",
+                T = b._config.usePrefixes ? _.split(" ") : [];
+            b._cssomPrefixes = T;
+            var O = {
+                elem: a("modernizr")
+            };
+            Modernizr._q.push(function() {
+                delete O.elem
+            });
+            var k = {
+                style: O.elem.style
+            };
+            Modernizr._q.unshift(function() {
+                delete k.style
+            });
+            var P = b._config.usePrefixes ? _.toLowerCase().split(" ") : [];
+            b._domPrefixes = P, b.testAllProps = h;
+            var z = function(t) {
+                var r, o = E.length,
+                    i = e.CSSRule;
+                if ("undefined" == typeof i) return n;
+                if (!t) return !1;
+                if (t = t.replace(/^@/, ""), r = t.replace(/-/g, "_").toUpperCase() + "_RULE", r in i) return "@" + t;
+                for (var s = 0; o > s; s++) {
+                    var a = E[s],
+                        l = a.toUpperCase() + "_" + r;
+                    if (l in i) return "@-" + a.toLowerCase() + "-" + t
+                }
+                return !1
+            };
+            b.atRule = z;
+            var A = b.prefixed = function(e, t, n) {
+                return 0 === e.indexOf("@") ? z(e) : (-1 != e.indexOf("-") && (e = p(e)), t ? h(e, t, n) : h(e, "pfx"))
+            };
+            b.testAllProps = y, Modernizr.addTest("flexbox", y("flexBasis", "1px", !0)), Modernizr.addTest("flexboxlegacy", y("boxDirection", "reverse", !0)), Modernizr.addTest("flexboxtweener", y("flexAlign", "end", !0)), Modernizr.addTest("flexwrap", y("flexWrap", "wrap", !0));
+            var E = b._config.usePrefixes ? " -webkit- -moz- -o- -ms- ".split(" ") : ["", ""];
+            b._prefixes = E, Modernizr.addTest("cssgradients", function() {
+                for (var e, t = "background-image:", n = "gradient(linear,left top,right bottom,from(#9f9),to(white));", r = "", o = 0, i = E.length - 1; i > o; o++) e = 0 === o ? "to " : "", r += t + E[o] + "linear-gradient(" + e + "left top, #9f9, white);";
+                Modernizr._config.usePrefixes && (r += t + "-webkit-" + n);
+                var s = a("a"),
+                    l = s.style;
+                return l.cssText = r, ("" + l.backgroundImage).indexOf("gradient") > -1
+            }), Modernizr.addTest("objectfit", !!A("objectFit"), {
+                aliases: ["object-fit"]
+            }), Modernizr.addTest("csspositionsticky", function() {
+                var e = "position:",
+                    t = "sticky",
+                    n = a("a"),
+                    r = n.style;
+                return r.cssText = e + E.join(t + ";" + e).slice(0, -e.length), -1 !== r.position.indexOf(t)
+            }), Modernizr.addTest("rgba", function() {
+                var e = a("a").style;
+                return e.cssText = "background-color:rgba(150,255,150,.5)", ("" + e.backgroundColor).indexOf("rgba") > -1
+            }), Modernizr.addTest("csstransforms", function() {
+                return -1 === navigator.userAgent.indexOf("Android 2.") && y("transform", "scale(1)", !0)
+            }), Modernizr.addTest("csstransitions", y("transition", "all", !0)), Modernizr.addTest("history", function() {
+                var t = navigator.userAgent;
+                return -1 === t.indexOf("Android 2.") && -1 === t.indexOf("Android 4.0") || -1 === t.indexOf("Mobile Safari") || -1 !== t.indexOf("Chrome") || -1 !== t.indexOf("Windows Phone") || "file:" === location.protocol ? e.history && "pushState" in e.history : !1
+            });
+            var j = a("input"),
+                L = "autocomplete autofocus list placeholder max min multiple pattern required step".split(" "),
+                N = {};
+            Modernizr.input = function(t) {
+                for (var n = 0, r = t.length; r > n; n++) N[t[n]] = !!(t[n] in j);
+                return N.list && (N.list = !(!a("datalist") || !e.HTMLDataListElement)), N
+            }(L), Modernizr.addTest("localstorage", function() {
+                var e = "modernizr";
+                try {
+                    return localStorage.setItem(e, e), localStorage.removeItem(e), !0
+                } catch (t) {
+                    return !1
+                }
+            }), o(), i(C), delete b.addTest, delete b.addAsyncTest;
+            for (var q = 0; q < Modernizr._q.length; q++) Modernizr._q[q]();
+            e.Modernizr = Modernizr
+        }(window, document);
+
+        //]]>
+    </script>
+    <script>
+        // Disable no-flexbox for pages that mix legacy styles supporting
+        // no-flexbox(no longer supported) and the new CSS approach
+        var isIE, isIE11, noFlexboxClassName
+        isIE = /MSIE/.test(navigator.userAgent) && !/Opera/.test(navigator.userAgent)
+        isIE11 = window.MSInputMethodContext && !/\bEdge\/[0-9.]+$/.test(navigator.userAgent)
+        if (window.Modernizr && window.Modernizr.flexbox && (isIE || isIE11)) {
+            noFlexboxClassName = document.documentElement.className.replace(/\bflexbox\b/, 'no-flexbox ie-flexbox')
+            document.documentElement.className = noFlexboxClassName
+        }
+    </script>
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" media="screen" href="../../../bs-assets.toptal.io/blackfish-assets/public_base_styles.5ea0cf22c308bb4ab5bb6245364b2803.css" />
+    <link rel="stylesheet" media="screen" href="../../../bs-assets.toptal.io/blackfish-assets/public_sorting_algorithms_styles.a7b35d274bd054c5ae6ad2648435b4b9.css" />
+</head>
+
+<body class="layout" data-view="layout#body" id="top">
+    <div class="layout_layer" data-view="layout#layout">
+        <header class="page_header hide_in_webview" data-role="fixed-header"></header>
+        <main class="layout-main">
+            <style type="text/css">
+                @font-face {
+                    font-display: swap;
+                    font-weight: 400;
+                    font-family: Proxima Nova;
+                    font-style: normal;
+                    src: url(https://frontier-assets.toptal.com/40a6e2b8c2bc99f6d71b9f93dbf695fe.woff2) format("woff2"), url(https://frontier-assets.toptal.com/7cac85ffd14a52221fddc4c497dfd26c.woff) format("woff"), url(https://frontier-assets.toptal.com/bf9f5d50c1b928ff21436517a1a95ad9.otf) format("opentype");
+                }
+                
+                @font-face {
+                    font-display: swap;
+                    font-weight: 600;
+                    font-family: Proxima Nova;
+                    font-style: normal;
+                    src: url(https://frontier-assets.toptal.com/3fb023cbbea947bff794503fdfba1cec.woff2) format("woff2"), url(https://frontier-assets.toptal.com/791f9bea40ce639002df71e98e01176c.woff) format("woff"), url(https://frontier-assets.toptal.com/f14eee643541cf03a10f26c944cc29f5.otf) format("opentype");
+                }
+                
+                .internal-linking-container {
+                    font-weight: 400;
+                    font-family: Proxima Nova, Arial, sans-serif;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: 100%;
+                    max-width: 100vw;
+                    height: 56px;
+                    overflow: hidden;
+                    color: #ffffff;
+                    background-color: #0f256e;
+                    position: absolute;
+                }
+                
+                .internal-linking-container~.page_header_line {
+                    margin-top: 56px;
+                }
+                
+                @media screen and (max-width: 768px) {
+                    .internal-linking-container {
+                        height: 32px;
+                        border: none;
+                        box-shadow: none;
+                    }
+                    .internal-linking-container~.page_header_line {
+                        margin-top: 32px;
+                    }
+                }
+                
+                .internal-linking-container .internal-linking-title {
+                    z-index: 1;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    flex-shrink: 0;
+                    height: 100%;
+                    color: #204ecf;
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 12px;
+                    text-transform: uppercase;
+                    background-color: #ffffff;
+                    min-width: auto;
+                }
+                
+                .internal-linking-container .internal-linking-title img {
+                    margin: 22px 8px 18px 24px;
+                }
+                
+                @media screen and (max-width: 768px) {
+                    .internal-linking-container .internal-linking-title img {
+                        margin: 8px;
+                    }
+                }
+                
+                .internal-linking-container .internal-linking-title span {
+                    margin: 16px 24px 16px 0;
+                    white-space: nowrap;
+                }
+                
+                @media screen and (max-width: 768px) {
+                    .internal-linking-container .internal-linking-title span {
+                        margin: 6px 16px 6px 0;
+                        font-size: 8px;
+                        line-height: 10px;
+                    }
+                }
+                
+                .internal-linking-container .internal-linking-ticker-list {
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 12px;
+                    line-height: 16px;
+                    animation-name: ticker;
+                    animation-duration: 180s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    min-width: auto;
+                }
+                
+                .internal-linking-container .internal-linking-ticker-list:hover {
+                    animation-play-state: paused;
+                }
+                
+                .internal-linking-container .internal-linking-ticker-list .internal-linking-link {
+                    margin: 20px 28px;
+                    padding: 5px 12px 3px 12px;
+                    color: #ffffff;
+                    white-space: nowrap;
+                    text-decoration: underline;
+                    min-width: auto;
+                }
+                
+                @media (max-width: 768px) {
+                    .internal-linking-container .internal-linking-ticker-list .internal-linking-link {
+                        margin: 4px 16px;
+                        text-decoration: none;
+                        border: 1px solid white;
+                        border-radius: 16px;
+                    }
+                }
+                
+                @keyframes ticker {
+                    0% {
+                        transform: translateX(0%);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+            </style>
+            <div class="internal-linking-container">
+                <div class="internal-linking-title"><img alt="" src="https://frontier-assets.toptal.com/ec99a6ba6efa2bbb78f99a929026b33d.svg" /><span>Skills in High Demand<br />by Toptal Clients</span></div>
+                <div class="internal-linking-ticker-list"><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="React.js Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/react" rel="noopener" target="_blank">React.js Developer Jobs</a>
+                    <a
+                        class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Node.js Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/nodejs" rel="noopener" target="_blank">Node.js Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Ruby on Rails Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/ruby-on-rails"
+                            rel="noopener" target="_blank">Ruby on Rails Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Azure Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/azure"
+                            rel="noopener" target="_blank">Azure Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="React Native Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/react-native"
+                            rel="noopener" target="_blank">React Native Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="QA Engineer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/qa"
+                            rel="noopener" target="_blank">QA Engineer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Go Engineer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/go"
+                            rel="noopener" target="_blank">Go Engineer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="JavaScript Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/javascript"
+                            rel="noopener" target="_blank">JavaScript Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Python Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/python"
+                            rel="noopener" target="_blank">Python Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Django Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/django"
+                            rel="noopener" target="_blank">Django Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="PHP Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/php"
+                            rel="noopener" target="_blank">PHP Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="C# Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/c-sharp"
+                            rel="noopener" target="_blank">C# Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="iOS Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/ios"
+                            rel="noopener" target="_blank">iOS Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Blockchain Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/blockchain"
+                            rel="noopener" target="_blank">Blockchain Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Swift Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/swift"
+                            rel="noopener" target="_blank">Swift Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="AWS Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/aws"
+                            rel="noopener" target="_blank">AWS Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Vue.js Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/vue-js"
+                            rel="noopener" target="_blank">Vue.js Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Java Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/java"
+                            rel="noopener" target="_blank">Java Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event=".NET Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/dot-net"
+                            rel="noopener" target="_blank">.NET Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Angular Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/angular"
+                            rel="noopener" target="_blank">Angular Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Android Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/android"
+                            rel="noopener" target="_blank">Android Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Magento Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/magento"
+                            rel="noopener" target="_blank">Magento Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Shopify Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/shopify"
+                            rel="noopener" target="_blank">Shopify Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="WordPress Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/wordpress"
+                            rel="noopener" target="_blank">WordPress Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Laravel Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/laravel"
+                            rel="noopener" target="_blank">Laravel Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Elixir Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/elixir"
+                            rel="noopener" target="_blank">Elixir Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Docker Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/docker"
+                            rel="noopener" target="_blank">Docker Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Flutter Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/flutter"
+                            rel="noopener" target="_blank">Flutter Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Software Architect Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/software-architect"
+                            rel="noopener" target="_blank">Software Architect Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Unity or Unity3D Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/unity-unity3d"
+                            rel="noopener" target="_blank">Unity or Unity3D Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Cloud Engineer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/cloud"
+                            rel="noopener" target="_blank">Cloud Engineer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="ASP.NET Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/asp-dot-net"
+                            rel="noopener" target="_blank">ASP.NET Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Kubernetes Expert Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/kubernetes"
+                            rel="noopener" target="_blank">Kubernetes Expert Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="System Security Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/security"
+                            rel="noopener" target="_blank">System Security Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Kotlin Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/kotlin"
+                            rel="noopener" target="_blank">Kotlin Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="CSS Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/css"
+                            rel="noopener" target="_blank">CSS Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Computer Vision Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/computer-vision"
+                            rel="noopener" target="_blank">Computer Vision Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="AI Engineer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/artificial-intelligence"
+                            rel="noopener" target="_blank">AI Engineer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Drupal Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/drupal"
+                            rel="noopener" target="_blank">Drupal Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="SQL Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/sql"
+                            rel="noopener" target="_blank">SQL Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Symfony Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/symfony"
+                            rel="noopener" target="_blank">Symfony Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Ruby Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/ruby"
+                            rel="noopener" target="_blank">Ruby Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Data Scientist Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/data-science"
+                            rel="noopener" target="_blank">Data Scientist Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Business Intelligence Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/business-intelligence"
+                            rel="noopener" target="_blank">Business Intelligence Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="C++ Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/c-plus-plus"
+                            rel="noopener" target="_blank">C++ Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Ionic Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/ionic"
+                            rel="noopener" target="_blank">Ionic Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="GraphQL Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/graphql"
+                            rel="noopener" target="_blank">GraphQL Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Machine Learning Engineer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/machine-learning"
+                            rel="noopener" target="_blank">Machine Learning Engineer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Xamarin Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/xamarin"
+                            rel="noopener" target="_blank">Xamarin Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Firebase Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/firebase"
+                            rel="noopener" target="_blank">Firebase Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="React.js Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/react"
+                            rel="noopener" target="_blank">React.js Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Node.js Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/nodejs"
+                            rel="noopener" target="_blank">Node.js Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Ruby on Rails Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/ruby-on-rails"
+                            rel="noopener" target="_blank">Ruby on Rails Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Azure Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/azure"
+                            rel="noopener" target="_blank">Azure Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="React Native Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/react-native"
+                            rel="noopener" target="_blank">React Native Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="QA Engineer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/qa"
+                            rel="noopener" target="_blank">QA Engineer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Go Engineer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/go"
+                            rel="noopener" target="_blank">Go Engineer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="JavaScript Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/javascript"
+                            rel="noopener" target="_blank">JavaScript Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Python Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/python"
+                            rel="noopener" target="_blank">Python Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Django Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/django"
+                            rel="noopener" target="_blank">Django Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="PHP Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/php"
+                            rel="noopener" target="_blank">PHP Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="C# Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/c-sharp"
+                            rel="noopener" target="_blank">C# Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="iOS Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/ios"
+                            rel="noopener" target="_blank">iOS Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Blockchain Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/blockchain"
+                            rel="noopener" target="_blank">Blockchain Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Swift Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/swift"
+                            rel="noopener" target="_blank">Swift Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="AWS Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/aws"
+                            rel="noopener" target="_blank">AWS Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Vue.js Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/vue-js"
+                            rel="noopener" target="_blank">Vue.js Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Java Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/java"
+                            rel="noopener" target="_blank">Java Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event=".NET Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/dot-net"
+                            rel="noopener" target="_blank">.NET Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Angular Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/angular"
+                            rel="noopener" target="_blank">Angular Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Android Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/android"
+                            rel="noopener" target="_blank">Android Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Magento Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/magento"
+                            rel="noopener" target="_blank">Magento Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Shopify Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/shopify"
+                            rel="noopener" target="_blank">Shopify Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="WordPress Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/wordpress"
+                            rel="noopener" target="_blank">WordPress Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Laravel Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/laravel"
+                            rel="noopener" target="_blank">Laravel Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Elixir Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/elixir"
+                            rel="noopener" target="_blank">Elixir Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Docker Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/docker"
+                            rel="noopener" target="_blank">Docker Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Flutter Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/flutter"
+                            rel="noopener" target="_blank">Flutter Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Software Architect Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/software-architect"
+                            rel="noopener" target="_blank">Software Architect Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Unity or Unity3D Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/unity-unity3d"
+                            rel="noopener" target="_blank">Unity or Unity3D Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Cloud Engineer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/cloud"
+                            rel="noopener" target="_blank">Cloud Engineer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="ASP.NET Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/asp-dot-net"
+                            rel="noopener" target="_blank">ASP.NET Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Kubernetes Expert Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/kubernetes"
+                            rel="noopener" target="_blank">Kubernetes Expert Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="System Security Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/security"
+                            rel="noopener" target="_blank">System Security Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Kotlin Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/kotlin"
+                            rel="noopener" target="_blank">Kotlin Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="CSS Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/css"
+                            rel="noopener" target="_blank">CSS Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Computer Vision Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/computer-vision"
+                            rel="noopener" target="_blank">Computer Vision Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="AI Engineer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/artificial-intelligence"
+                            rel="noopener" target="_blank">AI Engineer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Drupal Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/drupal"
+                            rel="noopener" target="_blank">Drupal Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="SQL Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/sql"
+                            rel="noopener" target="_blank">SQL Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Symfony Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/symfony"
+                            rel="noopener" target="_blank">Symfony Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Ruby Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/ruby"
+                            rel="noopener" target="_blank">Ruby Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Data Scientist Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/data-science"
+                            rel="noopener" target="_blank">Data Scientist Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Business Intelligence Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/business-intelligence"
+                            rel="noopener" target="_blank">Business Intelligence Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="C++ Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/c-plus-plus"
+                            rel="noopener" target="_blank">C++ Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Ionic Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/ionic"
+                            rel="noopener" target="_blank">Ionic Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="GraphQL Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/graphql"
+                            rel="noopener" target="_blank">GraphQL Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Machine Learning Engineer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/machine-learning"
+                            rel="noopener" target="_blank">Machine Learning Engineer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Xamarin Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/xamarin"
+                            rel="noopener" target="_blank">Xamarin Developer Jobs</a><a class="internal-linking-link" data-ga-category="inbound-link" data-ga-event="Firebase Developer Jobs" data-ga-label="SortingAlgorithms" href="https://www.toptal.com/freelance-jobs/developers/firebase"
+                            rel="noopener" target="_blank">Firebase Developer Jobs</a></div>
+            </div>
+            <script>
+                // Should be placed after GA was initialized as it depends
+                // on window.dataLayer and window.gtag to work properly
+                var SortingAlgorithmsLinks = document.querySelectorAll('.internal-linking-link');
+
+                function initializeDatalayer() {
+                    window.dataLayer = window.dataLayer || [];
+                    window.gtag = window.gtag || function() {
+                        dataLayer.push(arguments);
+                    };
+                }
+
+                initializeDatalayer();
+
+                if (SortingAlgorithmsLinks.length) {
+                    SortingAlgorithmsLinks.forEach(function(link) {
+                        link.addEventListener('click', function(e) {
+                            window.gtag('event', e.target.dataset.gaEvent, {
+                                'event_category': e.target.dataset.gaCategory,
+                                'event_label': e.target.dataset.gaLabel,
+                                non_interaction: true
+                            });
+                        });
+                    });
+                }
+            </script>
+            <div class="page_header_line"></div>
+            <header class="sorting_algorithms_header">
+                <div class="sorting_algorithms_header-inner">
+                    <div class="sorting_algorithms_header-logo page_header_top-logotype"><a class="logo is-big is-link" href="https://www.toptal.com/"><svg width="116" height="32" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M66.515 11.713c1.406 0 2.596.528 3.535 1.57.968 1.007 1.462 2.327 1.457 3.928-.005 1.61-.484 3.055-1.475 4.107-.943 1.008-2.127 1.52-3.533 1.52-1.384 0-2.538-.506-3.527-1.53-.986-1.06-1.464-2.499-1.464-4.116.005-1.598.5-2.92 1.473-3.927.98-1.046 2.134-1.553 3.523-1.553h.012zm6.802-1.264c-1.565-1.713-3.518-2.59-5.81-2.59-2.208 0-4.4 1.543-5.748 3.067l.005-2.85-4.12-.005-.045 23.383v.307l4.142.007.018-7.313c1.25 1.405 3.232 2.23 5.434 2.236 2.425 0 4.463-.866 6.061-2.567 1.61-1.713 2.43-4.13 2.437-6.904.005-2.832-.792-5.11-2.374-6.771zM77.79 11.558l-.017 9.868c-.006 2.13.58 3.649 1.73 4.514.716.54 1.627.813 2.708.813.831 0 2.134-.335 2.134-.335l-.368-3.598s-.951.308-1.412-.021c-.44-.314-.654-.986-.654-1.992l.016-9.249 3.835.005.007-3.43-3.837-.007.012-4.928-4.138-.005-.011 4.928-3.472-.005 3.467 3.442zM43.832 2.93H23.43l-.005 4.087h8.155l-.034 19.076v.375l4.312.006-.017-19.45 7.991-.007z" fill="#262D3D"/><path d="M9.094 19.935a.457.457 0 01-.274 0c-.09-.028-.164-.069-.329-.232l-1.805-1.81c-.159-.16-.205-.24-.233-.33a.451.451 0 010-.273c.028-.091.068-.166.233-.33l5.686-5.674c.159-.16.238-.205.33-.228a.425.425 0 01.273 0c.091.028.165.068.33.233l1.804 1.81c.16.159.205.238.228.33a.451.451 0 010 .273c-.028.09-.068.165-.233.33l-5.686 5.674c-.152.158-.233.2-.324.227zm12.765-6.568L15.72 7.21a6.435 6.435 0 00-.159-.154L8.52 0 5.416 3.09l4.537 4.548L0 17.558l6.14 6.151c.087.085.171.17.25.245l6.995 7.01 3.062-3.05-4.575-4.586 9.987-9.961z" fill="#204ECF"/><path d="M52.1 17.318c-.004 1.68-.5 3.067-1.48 4.125-.972 1.054-2.184 1.588-3.602 1.588-1.387-.005-2.59-.54-3.562-1.604-.95-1.036-1.434-2.43-1.434-4.132 0-1.702.49-3.09 1.445-4.126.973-1.052 2.174-1.587 3.57-1.587 1.41 0 2.622.54 3.595 1.605.98 1.057 1.473 2.446 1.468 4.13m1.304-6.761c-1.69-1.746-3.99-2.709-6.346-2.64-2.385 0-4.484.836-6.243 2.493-1.775 1.668-2.68 3.984-2.686 6.88-.004 2.896.894 5.213 2.665 6.886 1.757 1.662 3.863 2.509 6.248 2.516.09.005.181.005.274.005 2.23 0 4.438-.955 6.064-2.618 1.191-1.222 2.613-3.386 2.618-6.755.007-3.37-1.405-5.537-2.594-6.767m38.972 12.686c-1.49-.005-2.458-.854-2.453-2.157.006-1.355.95-2.146 2.971-2.488l4.137-.698v.04c-.011 3.123-1.917 5.303-4.637 5.303h-.018zm-1.906-8.77c0-1.052.551-3.37 3.602-3.37 1.082 0 1.696.365 2.213.798.5.415.751 1.439.751 2.288v.398l-5.035.784c-3.99.61-6.278 2.755-6.29 5.896-.005 1.629.587 3.023 1.713 4.047 1.11 1.007 2.63 1.543 4.423 1.548 2.26 0 3.956-.813 5.168-2.493.005.712.005 1.429.005 2.094h4.2l.028-12.063c.005-1.97-.638-3.876-1.906-4.923-1.254-1.031-2.892-1.56-5.265-1.566h-.033c-1.81 0-3.728.479-5.02 1.6-1.52 1.313-2.266 3.398-2.266 5.008l3.712-.046zM103.229 3.21l-.04 23.127v.103l3.716.011.04-23.134v-.102zM112.442 22.556v.934h.714c.394 0 .592-.154.592-.46 0-.32-.198-.473-.592-.473h-.714zm1.25 2.645l-.745-1.328h-.505v1.328h-.46v-3.05h1.24c.614 0 .976.363.976.867 0 .427-.32.746-.747.834l.758 1.349h-.517zm-2.983-1.524a2.3 2.3 0 00.668 1.666c.45.45.999.68 1.658.68a2.24 2.24 0 001.645-.68c.45-.46.68-1.01.68-1.666 0-.66-.23-1.208-.68-1.657a2.21 2.21 0 00-1.645-.692c-.647 0-1.196.231-1.647.692a2.25 2.25 0 00-.679 1.657zm-.462 0c0-.768.264-1.427.813-1.976a2.688 2.688 0 011.963-.822c.768 0 1.437.274 1.976.822.548.549.822 1.208.822 1.976 0 .777-.274 1.427-.822 1.963-.549.549-1.208.811-1.976.811s-1.425-.262-1.963-.81a2.664 2.664 0 01-.814-1.965z" fill="#262D3D"/></g></svg>
+</a></div>
+                    <h2 class="sorting_algorithms_header-description">Toptal connects the top 3% of <a href="https://www.toptal.com/developers">freelance developers</a> all over the world.</h2>
+                </div>
+            </header>
+            <section class="sorting_algorithms_grid">
+                <div class="sorting_algorithms_grid-row">
+                    <div class="sorting_algorithms_grid-column is-full_width">
+                        <div class="sorting_algorithms_hero">
+                            <h1 class="sorting_algorithms_hero-title">Heap Sort</h1>
+                            <h2 class="sorting_algorithms_hero-subtitle">Animation, code, analysis, and discussion of heap sort on 4 initial conditions.</h2>
+                            <div class="sorting_algorithms_hero-back_button"><a class="button is-white is-small is-thin" href="../sorting-algorithms.html">&larr; Back to all algorithms and initial conditions</a></div>
+                            <div class="sorting_algorithms_hero-links">
+                                <ul class="social_share is-horizontal is-centered" data-view="shared#social_share" data-youtube-channel-url="https://www.youtube.com/channel/UCNqm_euTHZz3o5OnKhUS-oA">
+                                    <li class="social_share-item is-counter" title="Total number of shares"><span class="social_share-item_num" data-role="counter_num">0</span><span class="social_share-item_text" data-role="counter_text">shares</span></li>
+                                    <li class="social_share-item">
+                                        <a class="social_share-item_link" data-role="link" data-track-click="SocialShareButtonClicked" data-track-default-data="{&quot;network&quot;:&quot;linkedin&quot;}" data-type="linkedin" title="Share on LinkedIn"><img alt="Share on LinkedIn" class="social_share-item_image" height="50" src="../../../bs-assets.toptal.io/blackfish-assets/public/base/images/primitives/social/share_bar/linkedin_b923c3.png" width="50" /></a>
+                                    </li>
+                                    <li class="social_share-item">
+                                        <a class="social_share-item_link" data-role="link" data-track-click="SocialShareButtonClicked" data-track-default-data="{&quot;network&quot;:&quot;twitter&quot;}" data-type="twitter" title="Share on Twitter"><img alt="Share on Twitter" class="social_share-item_image" height="50" src="../../../bs-assets.toptal.io/blackfish-assets/public/base/images/primitives/social/share_bar/twitter_83c6d4.png" width="50" /></a>
+                                    </li>
+                                    <li class="social_share-item">
+                                        <a class="social_share-item_link" data-role="link" data-track-click="SocialShareButtonClicked" data-track-default-data="{&quot;network&quot;:&quot;facebook&quot;}" data-type="facebook" title="Share on Facebook"><img alt="Share on Facebook" class="social_share-item_image" height="50" src="../../../bs-assets.toptal.io/blackfish-assets/public/base/images/primitives/social/share_bar/facebook_dc66c9.png" width="50" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sorting_algorithms_grid" data-view="sorting_algorithms#animation">
+                <div class="sorting_algorithms_grid-row">
+                    <div class="sorting_algorithms_grid-column is-full_width">
+                        <div class="sorting_algorithms_hint">
+                            <p><span class="sorting_algorithms_hint-subtitle">How to use:&nbsp;</span>Press <strong>"Play all"</strong>, or choose the&nbsp;&nbsp;<img src="../../../bs-assets.toptal.io/blackfish-assets/public/pages/sorting_algorithms/images/play_blue_8556fc.png"
+                                    width="15" />&nbsp;&nbsp;button.</p>
+                        </div>
+                        <div class="sorting_algorithms_table">
+                            <table class="sorting_algorithms_table-container">
+                                <tr>
+                                    <th>
+                                        <a class="sorting_algorithms_table-play is-black" data-role="reload_all" href="#"></a><a class="sorting_algorithms_table-play_all" data-role="reload_all" href="#">Play All</a></th>
+                                    <td>
+                                        <div class="sorting_algorithms_table-td" data-role="td">
+                                            <div class="sorting_algorithms_table-hover_card" data-role="hover_card">
+                                                <div class="sorting_algorithms_table-hover_card_actions">
+                                                    <div class="sorting_algorithms_table-play is-white"></div>Play animation</div>
+                                            </div><a href="random-initial-order.html">Random</a><img alt="" class="sorting_algorithms_table-image" data-animated="{&quot;20&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27931/heap-sort-c24ae0d95352b48ba7bb3fcb8e9007b7.gif&quot;,&quot;30&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27933/heap-sort-cd3c6f51b880b332d2a7d5b383d16a78.gif&quot;,&quot;40&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27935/heap-sort-6422d460aabda135c3fbdb801ef267b8.gif&quot;,&quot;50&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27937/heap-sort-f79bb1ccfa2a05d9693e7109c31d9b77.gif&quot;}"
+                                                data-role="sorting_example" data-static="{&quot;20&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27930/heap-sort-0-dc86a88ab889d19e8ffad6cba3eb6e2f.gif&quot;,&quot;30&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27932/heap-sort-0-436051c91fedf976551a47bbd6efddff.gif&quot;,&quot;40&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27934/heap-sort-0-65e37ae1a3a05ce891de9f9acbba8052.gif&quot;,&quot;50&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27936/heap-sort-0-f83472c3c53268b30f1b43e690a3a370.gif&quot;}"
+                                                src="../../../bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27930/heap-sort-0-dc86a88ab889d19e8ffad6cba3eb6e2f.gif" /></div>
+                                    </td>
+                                    <td>
+                                        <div class="sorting_algorithms_table-td" data-role="td">
+                                            <div class="sorting_algorithms_table-hover_card" data-role="hover_card">
+                                                <div class="sorting_algorithms_table-hover_card_actions">
+                                                    <div class="sorting_algorithms_table-play is-white"></div>Play animation</div>
+                                            </div><a href="nearly-sorted-initial-order.html">Nearly Sorted</a><img alt="" class="sorting_algorithms_table-image" data-animated="{&quot;20&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27939/heap-sort-8b46b4e3ba542aa8b3779a1b443e847d.gif&quot;,&quot;30&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27941/heap-sort-36c8bfb330a2810ee6c88e3ba21c0899.gif&quot;,&quot;40&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27943/heap-sort-d4b09de18bbf20a9e9d9f7785f4bd689.gif&quot;,&quot;50&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27945/heap-sort-38af6f77a0530769885f92107d3005bd.gif&quot;}"
+                                                data-role="sorting_example" data-static="{&quot;20&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27938/heap-sort-0-2574ce46d0886b16887e6f5baff4071c.gif&quot;,&quot;30&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27940/heap-sort-0-d7227fe6ebde46ad4f294746971cf5ea.gif&quot;,&quot;40&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27942/heap-sort-0-84f462db576f62c1b15abc89cc8fde75.gif&quot;,&quot;50&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27944/heap-sort-0-f0bb4e1c7359baa10046f69af97f5ec6.gif&quot;}"
+                                                src="../../../bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27938/heap-sort-0-2574ce46d0886b16887e6f5baff4071c.gif" /></div>
+                                    </td>
+                                    <td>
+                                        <div class="sorting_algorithms_table-td" data-role="td">
+                                            <div class="sorting_algorithms_table-hover_card" data-role="hover_card">
+                                                <div class="sorting_algorithms_table-hover_card_actions">
+                                                    <div class="sorting_algorithms_table-play is-white"></div>Play animation</div>
+                                            </div><a href="reversed-initial-order.html">Reversed</a><img alt="" class="sorting_algorithms_table-image" data-animated="{&quot;20&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27947/heap-sort-bda2e42307661ede1eede49d361655b9.gif&quot;,&quot;30&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27949/heap-sort-9563a3f13d65165d7d7db9e17e5afb2d.gif&quot;,&quot;40&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27951/heap-sort-7100f674cfa7744f7d80824144d4f447.gif&quot;,&quot;50&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27953/heap-sort-e9fe4d2c0fd0c8adbc4caebaaea439da.gif&quot;}"
+                                                data-role="sorting_example" data-static="{&quot;20&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27946/heap-sort-0-09cbac8a6211b64104a725afe9405fc0.gif&quot;,&quot;30&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27948/heap-sort-0-1e78faf291cd76848dc83b4cec7acd55.gif&quot;,&quot;40&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27950/heap-sort-0-9c219fbbcba0c3e688a9a390d8899d79.gif&quot;,&quot;50&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27952/heap-sort-0-e3abffb49f206d24458a0151d4d40e96.gif&quot;}"
+                                                src="../../../bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27946/heap-sort-0-09cbac8a6211b64104a725afe9405fc0.gif" /></div>
+                                    </td>
+                                    <td>
+                                        <div class="sorting_algorithms_table-td" data-role="td">
+                                            <div class="sorting_algorithms_table-hover_card" data-role="hover_card">
+                                                <div class="sorting_algorithms_table-hover_card_actions">
+                                                    <div class="sorting_algorithms_table-play is-white"></div>Play animation</div>
+                                            </div><a href="few-unique-keys.html">Few Unique</a><img alt="" class="sorting_algorithms_table-image" data-animated="{&quot;20&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27955/heap-sort-e05cd320a6e0a29afae979357bd24c95.gif&quot;,&quot;30&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27957/heap-sort-38c2701813444a44bc443a6964558b0e.gif&quot;,&quot;40&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27959/heap-sort-8601922ef5e2b30b6c19156f4e9f153d.gif&quot;,&quot;50&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/animated_image_file/animated_image/27961/heap-sort-6fba356e86ebbc9757226e13f35069af.gif&quot;}"
+                                                data-role="sorting_example" data-static="{&quot;20&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27954/heap-sort-0-1f040b57885b112e7bd0f429eac43ec6.gif&quot;,&quot;30&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27956/heap-sort-0-cce8c4f63401ef97175cdd66fa425a36.gif&quot;,&quot;40&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27958/heap-sort-0-80e7ead1b8253b7bcdd2a38140ddb247.gif&quot;,&quot;50&quot;:&quot;https://bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27960/heap-sort-0-fb0f69160c8e78c34e5bcff5d13483a9.gif&quot;}"
+                                                src="../../../bs-uploads.toptal.io/blackfish-uploads/sorting_algorithms_page/content/illustration/static_image_file/static_image/27954/heap-sort-0-1f040b57885b112e7bd0f429eac43ec6.gif" /></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="sorting_algorithms_grid-row">
+                    <div class="sorting_algorithms_grid-column">
+                        <div class="sorting_algorithms_content">
+                            <h3>ALGORITHM</h3>
+                            <div class="sorting_algorithms_code" data-view="sorting_algorithms#code"><pre><code># heapify
+for i = n/2:1, sink(a,i,n)
+→ invariant: a[1,n] in heap order
+
+# sortdown
+for i = 1:n,
+    swap a[1,n-i+1]
+    sink(a,1,n-i)
+    → invariant: a[n-i+1,n] in final position
+end
+
+# sink from i in a[1..n]
+function sink(a,i,n):
+    # {lc,rc,mc} = {left,right,max} child index
+    lc = 2*i
+    if lc &gt; n, return # no children
+    rc = lc + 1
+    mc = (rc &gt; n) ? lc : (a[lc] &gt; a[rc]) ? lc : rc
+    if a[i] &gt;= a[mc], return # heap ordered
+    swap a[i,mc]
+    sink(a,mc,n)
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sorting_algorithms_grid-column">
+                        <div class="sorting_algorithms_content">
+                            <h3>DISCUSSION</h3>
+                            <p>Heap sort is simple to implement, performs an O(n·lg(n)) in-place sort, but is not stable.</p>
+
+                            <p>The first loop, the Θ(n) “heapify” phase, puts the array into heap order. The second loop, the O(n·lg(n)) “sortdown” phase, repeatedly extracts the maximum and restores heap order.</p>
+
+                            <p>The sink function is written recursively for clarity. Thus, as shown, the code requires Θ(lg(n)) space for the recursive call stack. However, the tail recursion in sink() is easily converted to iteration, which yields the O(1)
+                                space bound.</p>
+
+                            <p>Both phases are slightly adaptive, though not in any particularly useful manner. In the nearly sorted case, the heapify phase destroys the original order. In the reversed case, the heapify phase is as fast as possible since
+                                the array starts in heap order, but then the sortdown phase is typical. In the few unique keys case, there is some speedup but not as much as in shell sort or 3-way quicksort.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sorting_algorithms_grid-row">
+                    <div class="sorting_algorithms_grid-column">
+                        <div class="sorting_algorithms_content">
+                            <h3>KEY</h3>
+                            <ul>
+                                <li>Black values are sorted.</li>
+                                <li>Gray values are unsorted.</li>
+                                <li>A red triangle marks the algorithm position.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sorting_algorithms_grid-column">
+                        <div class="sorting_algorithms_content">
+                            <h3>PROPERTIES</h3>
+                            <ul>
+                                <li>Not stable</li>
+                                <li>O(1) extra space (see discussion)</li>
+                                <li>O(n·lg(n)) time</li>
+                                <li>Not really adaptive</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="sorting_algorithms_divider"></div>
+            <section class="sorting_algorithms_grid">
+                <div class="sorting_algorithms_grid-row">
+                    <div class="sorting_algorithms_grid-column is-full_width">
+                        <div class="sorting_algorithms_interview">
+                            <h2 class="sorting_algorithms_interview-title">Preparing for a technical interview? Check out our interview guides.</h2>
+                            <ul class="sorting_algorithms_interview-list"><a class="tag" href="https://www.toptal.com/python#hiring-guide">Python</a><a class="tag" href="https://www.toptal.com/c-plus-plus#hiring-guide">C++</a><a class="tag" href="https://www.toptal.com/javascript#hiring-guide">JavaScript</a>
+                                <a
+                                    class="tag" href="https://www.toptal.com/c-sharp#hiring-guide">C#</a><a class="tag" href="https://www.toptal.com/php#hiring-guide">PHP</a><a class="tag" href="https://www.toptal.com/ruby#hiring-guide">Ruby</a><a class="tag" href="https://www.toptal.com/java#hiring-guide">Java</a></ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="hide_in_webview page_footer_wrapper">
+            <section class="page_footer_legal-wrapper has-no_bottom_padding">
+                <div class="page_footer_legal is-narrow">
+                    <div class="page_footer_legal-logotype"><a class="logo is-mini is-link for-footer" href="https://www.toptal.com/developers"><svg height="29" viewbox="0 0 105 29" width="105" xmlns="http://www.w3.org/2000/svg"><defs><path d="M1.308.785h16.396v21.667H1.308z" id="a" /><path d="M1.125.61h5.05v5.05h-5.05z" id="c" /></defs><g fill="none" fill-rule="evenodd"><g transform="translate(50.89 6.337)"><path d="M9.39 4.277c1.273 0 2.351.479 3.203 1.423.877.913 1.324 2.11 1.32 3.56-.005 1.459-.439 2.769-1.337 3.722-.854.913-1.928 1.377-3.201 1.377-1.255 0-2.3-.458-3.198-1.386-.893-.96-1.326-2.264-1.326-3.73.005-1.449.454-2.646 1.335-3.56.888-.947 1.934-1.406 3.193-1.406h.01zm6.163-1.145C14.134 1.58 12.365.785 10.288.785c-2.002 0-3.988 1.398-5.21 2.78L5.084.98 1.35.976l-.04 21.192v.278l3.753.006.017-6.628c1.133 1.274 2.929 2.021 4.924 2.027 2.198 0 4.045-.784 5.493-2.326 1.46-1.552 2.202-3.743 2.208-6.256.005-2.567-.717-4.631-2.15-6.137z" fill="currentColor" /></g><path d="M70.497 10.474l-.015 8.944c-.006 1.929.526 3.306 1.567 4.09.65.49 1.475.737 2.455.737.753 0 1.934-.304 1.934-.304l-.334-3.26s-.862.278-1.28-.02c-.398-.284-.592-.893-.592-1.805l.015-8.382 3.475.005.006-3.109-3.477-.006.01-4.466-3.749-.005-.01 4.467-3.147-.005 3.142 3.12zM39.723 2.656h-18.49l-.004 3.703h7.39l-.03 17.288v.34l3.907.005-.015-17.627 7.242-.006z" fill="currentColor" /><path d="M8.241 18.067a.414.414 0 01-.248 0c-.08-.026-.148-.063-.298-.212l-1.636-1.64c-.144-.144-.186-.217-.211-.3a.409.409 0 010-.246c.025-.083.061-.15.211-.3l5.153-5.141c.144-.145.216-.186.3-.207a.387.387 0 01.247 0c.082.026.15.062.3.211l1.634 1.64c.145.145.185.216.206.3a.409.409 0 010 .247c-.025.083-.061.15-.21.3L8.534 17.86c-.138.144-.211.181-.294.207zm11.569-5.953l-5.565-5.58a5.831 5.831 0 00-.144-.14L7.721 0 4.91 2.8 9.02 6.923l-9.02 8.99 5.564 5.575c.078.076.154.154.226.221l6.339 6.354 2.775-2.765-4.146-4.156 9.051-9.027z" fill="currentColor" /><path d="M47.216 15.694c-.004 1.522-.453 2.78-1.341 3.74-.882.954-1.98 1.437-3.265 1.437-1.257-.004-2.346-.489-3.228-1.453-.86-.938-1.3-2.202-1.3-3.745 0-1.542.444-2.8 1.31-3.739.882-.953 1.97-1.438 3.235-1.438 1.278 0 2.377.49 3.258 1.455.888.958 1.336 2.216 1.331 3.743m1.181-6.128c-1.531-1.582-3.615-2.454-5.75-2.392-2.162 0-4.064.758-5.658 2.26-1.61 1.51-2.43 3.61-2.434 6.235-.005 2.624.81 4.724 2.414 6.24 1.593 1.505 3.501 2.273 5.662 2.28.083.004.165.004.249.004 2.02 0 4.022-.865 5.496-2.373 1.08-1.107 2.368-3.068 2.372-6.121.006-3.054-1.273-5.018-2.351-6.133M83.715 21.063c-1.35-.005-2.227-.774-2.222-1.955.006-1.227.86-1.944 2.692-2.254l3.75-.633v.036c-.01 2.83-1.738 4.806-4.203 4.806h-.017zm-1.727-7.948c0-.953.5-3.053 3.265-3.053.98 0 1.537.33 2.005.723.454.375.681 1.303.681 2.073v.36l-4.563.711c-3.617.553-5.69 2.497-5.7 5.344-.005 1.476.531 2.739 1.552 3.667 1.006.913 2.383 1.398 4.008 1.402 2.048 0 3.585-.736 4.684-2.258.004.645.004 1.294.004 1.898h3.807l.025-10.933c.004-1.785-.578-3.513-1.727-4.462-1.136-.934-2.621-1.413-4.772-1.419h-.03c-1.64 0-3.378.434-4.549 1.45-1.377 1.19-2.053 3.08-2.053 4.539l3.363-.042zM93.551 2.909l-.036 20.959v.093l3.368.01.036-20.965v-.093z" fill="currentColor" /><g transform="translate(98.787 18.311)"><path d="M3.114 2.13v.846h.646c.358 0 .538-.14.538-.418 0-.288-.18-.428-.538-.428h-.646zm1.133 2.397l-.675-1.204h-.458v1.204h-.418V1.762H3.82c.557 0 .885.33.885.786 0 .388-.289.677-.677.756l.687 1.223h-.468zM1.544 3.145c0 .587.197 1.093.604 1.51a2.04 2.04 0 001.503.617c.587 0 1.084-.208 1.491-.617a2.08 2.08 0 00.617-1.51 2.04 2.04 0 00-.617-1.501 2.003 2.003 0 00-1.49-.627c-.588 0-1.084.21-1.493.627a2.039 2.039 0 00-.615 1.501zm-.42 0c0-.696.24-1.293.737-1.79A2.436 2.436 0 013.641.61c.696 0 1.302.248 1.79.745.497.497.745 1.094.745 1.79 0 .705-.248 1.293-.745 1.78a2.432 2.432 0 01-1.79.735c-.696 0-1.292-.238-1.78-.735a2.414 2.414 0 01-.736-1.78z" fill="currentColor" /></g></g></svg></a>
+                        <p
+                            class="logo-motto is-mini">Hire the top 3% of freelance talent™</p>
+                    </div>
+                    <ul class="page_footer_legal-links">
+                        <li class="page_footer_legal-links_item is-copyright">
+                            <p class="page_footer_legal-copyright">© Copyright 2010 - 2022 Toptal, LLC</p>
+                        </li>
+                        <li class="page_footer_legal-links_item has-right_margin"><a class="page_footer_legal-link" href="https://www.toptal.com/privacy" rel="nofollow">Privacy Policy</a></li>
+                        <li class="page_footer_legal-links_item"><a class="page_footer_legal-link" href="https://www.toptal.com/tos" rel="nofollow">Website Terms</a></li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <div class="layout-overlay" data-view="layout#overlay"></div>
+    <div class="notification-container" data-view="notifications#service"></div>
+    <script>
+        setTimeout(function() {
+            classNameWithFont = document.documentElement.className + ' wf-active'
+            document.documentElement.className = classNameWithFont
+        }, 0);
+    </script>
+    <script src="../../../bs-assets.toptal.io/blackfish-assets/public_base_js.07c05d9827b9c7fc0920.js"></script>
+    <script src="../../../bs-assets.toptal.io/blackfish-assets/public_sorting_algorithms_js.be6eec2087ab1abb361e.js"></script>
+    <div class="cookie_banner-container" data-allow="Got it" data-cookie-policy-type="privacy_shield" data-message="By continuing to use this site you agree to our &lt;a rel=&#39;nofollow&#39; href=%27https_/www.toptal.com/cookie-policy%27_cookie.html Policy&lt;/a&gt;."
+        data-reload="false" data-view="cookie_banner#view"></div>
+    <div class="layout-counters">
+        <div class="vendor_scripts">
+            <script>
+                ! function(f, b, e, v, n, t, s) {
+                    if (f.fbq) return;
+                    n = f.fbq = function() {
+                        n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    };
+                    if (!f._fbq) f._fbq = n;
+                    n.push = n;
+                    n.loaded = !0;
+                    n.version = '2.0';
+                    n.queue = [];
+                    t = b.createElement(e);
+                    t.async = !0;
+                    t.src = v;
+                    s = b.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t, s)
+                }(window, document, 'script',
+                    '../../../connect.facebook.net/en_US/fbevents.js');
+
+                fbq('init', "463369723801939");
+                fbq('track', 'ViewContent');
+            </script><noscript><img alt="" height="1" src="https://www.facebook.com/tr?id=463369723801939&amp;ev=ViewContent&amp;noscript=1" width="1" /></noscript>
+            <script async="" defer="" id="hs-script-loader" src="../../../js.hs-scripts.com/2799924.js"
+                type="text/javascript"></script>
+            <script>
+                var _hsq = window._hsq = window._hsq || [];
+            </script>
+            <script>
+                (function(w, d, s, l, i, k) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src = '../../../www.googletagmanager.com/gtm5445.html?id=' + i + dl + k;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-K4WD79L', '');
+            </script>
+        </div>
+    </div>
+    <div class="bounce_modal_container"></div>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"71c15e856b3c8b87","token":"7da7549002684d63b0f6277c72d857c2","version":"2022.6.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+<!-- Mirrored from www.toptal.com/developers/sorting-algorithms/heap-sort by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jun 2022 06:08:34 GMT -->
+
+</html>
