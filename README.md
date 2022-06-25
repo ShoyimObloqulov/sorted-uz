@@ -1,2 +1,2 @@
 # sorted-uz
-HTML/CSS/JS
+[HTML/CSS/JS](https://soted-uz.netlify.app/src/developers/index.html)
